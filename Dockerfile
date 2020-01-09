@@ -1,6 +1,6 @@
 FROM centos:8
 
-ARG TERRAFORM_VERSION="0.12.18"
+ARG TERRAFORM_VERSION="0.12.19"
 ARG ANSIBLE_VERSION="2.9.2"
 
 LABEL maintainer="Lukas Steiner <lukas.steiner@siticom.de>"
