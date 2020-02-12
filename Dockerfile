@@ -1,13 +1,13 @@
 FROM centos:8
 
-ARG TERRAFORM_VERSION="0.12.19"
-ARG ANSIBLE_VERSION="2.9.2"
+ARG TERRAFORM_VERSION="0.12.20"
+ARG ANSIBLE_VERSION="2.9.4"
 
 LABEL maintainer="Lukas Steiner <lukas.steiner@siticom.de>"
 LABEL terraform_version=${TERRAFORM_VERSION}
 LABEL ansible_version=${ANSIBLE_VERSION}
 
-RUN dnf install -y unzip openssh-clients jq python3 python3-pip \
+RUN dnf install -y unzip openssh-clients jq python3 python3-pip git \
     && pip3 install ansible==${ANSIBLE_VERSION} awscli \
     && curl -O https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terraform_${TERRAFORM_VERSION}_linux_amd64.zip \
     && unzip terraform*.zip \
