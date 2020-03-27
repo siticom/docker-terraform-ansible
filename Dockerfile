@@ -1,7 +1,7 @@
 FROM centos:8
 
-ARG TERRAFORM_VERSION="0.12.20"
-ARG ANSIBLE_VERSION="2.9.4"
+ARG TERRAFORM_VERSION="0.12.24"
+ARG ANSIBLE_VERSION="2.9.6"
 
 LABEL maintainer="Lukas Steiner <lukas.steiner@siticom.de>"
 LABEL terraform_version=${TERRAFORM_VERSION}
